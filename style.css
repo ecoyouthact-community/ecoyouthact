@@ -1,0 +1,1228 @@
+/* =========================
+   COLOR PALETTE
+========================= */
+:root {
+  --color-primary: #377A00;
+  --color-primary-dark: #2F6A00;
+
+  --color-bg-main: #EAF7EB;
+  --color-bg-soft: #D0EBCF;
+  --color-white: #FFFFFF;
+
+  --color-text-main: #151716;
+  --color-text-strong: #011502;
+  --color-text-muted: #222222;
+}
+
+/* =========================
+   RESET
+========================= */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+/* =========================
+   BASE
+========================= */
+body {
+  font-family: 'Open Sans', sans-serif;
+  font-size: 16px;
+  line-height: 1.7;
+  color: var(--color-text-main);
+  background: var(--color-white);
+  overflow-x: hidden;
+}
+
+/* =========================
+   HEADER / NAV
+========================= */
+.site-header {
+  background: var(--color-white);
+}
+
+.header-inner {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 24px;
+
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.site-logo a {
+  font-family: 'Libre Baskerville', serif;
+  font-weight: 700;
+  font-size: 1.2rem;
+  text-decoration: none;
+  color: var(--color-text-strong);
+}
+
+.site-nav {
+  display: flex;
+  gap: 32px;
+}
+
+.site-nav a {
+  text-decoration: none;
+  color: var(--color-text-muted);
+  font-size: 0.95rem;
+}
+
+.site-nav a:hover {
+  color: var(--color-primary);
+}
+
+.btn-header {
+  padding: 10px 28px;
+  border-radius: 999px;
+  border: 2px solid var(--color-primary);
+  color: var(--color-primary);
+  background: transparent;
+  text-decoration: none;
+  font-weight: 600;
+}
+
+/* =========================
+   HERO
+========================= */
+.hero-uagb {
+  background: linear-gradient(
+    to bottom,
+    var(--color-white) 69%,
+    var(--color-white) 55%,
+    var(--color-bg-main) 40%,
+    var(--color-bg-main) 80%
+  );
+
+  padding: 100px 20px 120px;
+  text-align: center;
+}
+
+.hero-inner {
+  max-width: 1000px;
+  margin: 0 auto;
+}
+
+.hero-prefix {
+  font-size: 14px;
+  color: var(--color-primary);
+  margin-bottom: 16px;
+  display: block;
+}
+
+.hero-title {
+  font-family: 'Libre Baskerville', serif;
+  font-size: clamp(2.4rem, 6vw, 4rem);
+  line-height: 1.15;
+  margin-bottom: 24px;
+}
+
+.hero-desc {
+  max-width: 680px;
+  margin: 0 auto 36px;
+  color: var(--color-text-muted);
+}
+
+.btn-hero {
+  padding: 14px 40px;
+  border-radius: 16px; /* ⬅ beda langsung kelihatan */
+
+  background: transparent;
+  color: var(--color-text-strong);
+  border: 2px solid var(--color-text-strong);
+
+  font-weight: 700;
+  letter-spacing: 1px;
+  text-decoration: none;
+  transition: all 0.25s ease;
+}
+
+.btn-hero:hover {
+  background: var(--color-primary);
+  color: var(--color-white);
+  border-color: var(--color-primary);
+}
+
+/* HERO IMAGE */
+.hero-image {
+  margin-top: 56px;
+  overflow: hidden;
+  border-radius: 28px 110px 28px 110px;
+}
+
+.hero-image img {
+  width: 100%;
+  height: auto;
+  max-height: 520px;
+  object-fit: cover;
+  display: block;
+}
+
+/* =========================
+   ABOUT
+========================= */
+.about-split {
+  background: var(--color-bg-main);
+  padding: 100px 0;
+}
+
+.about-grid {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 24px;
+
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 80px;
+}
+
+.about-heading h2 {
+  font-family: 'Libre Baskerville', serif;
+  font-size: 2.4rem;
+  margin-bottom: 12px;
+}
+
+.about-heading h3 {
+  font-size: 1.3rem;
+  font-weight: 400;
+  color: var(--color-text-muted);
+}
+
+.about-description p {
+  max-width: 60ch;
+  margin-bottom: 18px;
+}
+
+/* =========================
+   SCROLL IMAGE (SAFE)
+========================= */
+.scroll-reveal {
+  width: 100%;
+  min-height: 520px;
+  margin: 80px 0;
+
+  background-image: url("images/eyadocs-5.jpeg");
+  background-repeat: no-repeat;
+  background-size: 95%;
+  background-position: 50% 70%;
+  background-attachment: scroll;
+}
+
+/* ONLY DESKTOP GETS FIXED */
+@media (min-width: 1025px) {
+  .scroll-reveal {
+    background-attachment: fixed;
+  }
+}
+
+/* =========================
+   SERVICES
+========================= */
+.services-section {
+  background: var(--color-bg-main);
+  padding: 100px 0;
+}
+
+.services-inner {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 24px;
+}
+
+.services-header {
+  text-align: center;
+  margin-bottom: 72px;
+}
+
+.services-line {
+  width: 48px;
+  height: 2px;
+  background: var(--color-primary);
+  margin: 0 auto 16px;
+}
+
+.services-header h2 {
+  font-family: 'Libre Baskerville', serif;
+  font-size: 2.6rem;
+}
+
+.services-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 32px;
+}
+
+.service-card {
+  background: var(--color-white);
+  border-radius: 28px;
+  overflow: hidden;
+
+  display: flex;
+  flex-direction: column;
+}
+
+.service-content {
+  padding: 44px 36px 32px;
+}
+
+.service-content h3 {
+  font-family: 'Libre Baskerville', serif;
+  font-size: 1.6rem;
+  margin-bottom: 14px;
+}
+
+.service-content p {
+  color: var(--color-text-muted);
+}
+
+.service-image {
+  width: 100%;
+  height: 220px;
+  margin-top: 24px;
+}
+
+.service-image img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+}
+
+/* =========================
+   VALUES
+========================= */
+.values-section {
+  background: var(--color-bg-main);
+  padding: 100px 0;
+}
+
+.values-inner {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 24px;
+}
+
+.values-header {
+  text-align: center;
+  margin-bottom: 64px;
+}
+
+.values-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 70px;
+}
+
+.value-item {
+  padding-left: 28px;
+  border-left: 2px solid var(--color-primary);
+}
+
+.value-item h3 {
+  font-family: 'Libre Baskerville', serif;
+  margin-bottom: 12px;
+}
+
+/* =========================
+   FOOTER
+========================= */
+.footer {
+  background: var(--color-primary);
+  color: var(--color-white);
+  text-align: center;
+  padding: 40px 20px;
+}
+
+.btn {
+  display: inline-block;
+  margin-top: 15px;
+  padding: 10px 25px;
+  background: var(--color-white);
+  color: var(--color-primary);
+  border: 2px solid var(--color-primary);
+  text-decoration: none;
+  font-weight: bold;
+  border-radius: 6px;
+}
+
+/* =========================
+   RESPONSIVE
+========================= */
+@media (max-width: 1024px) {
+  .services-grid,
+  .values-grid {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 40px;
+  }
+
+  .hero-image img {
+    max-height: 380px;
+  }
+}
+
+@media (max-width: 900px) {
+  .site-nav {
+    display: none;
+  }
+
+  .about-grid {
+    grid-template-columns: 1fr;
+    gap: 40px;
+  }
+}
+
+@media (max-width: 768px) {
+  .hero-uagb {
+    padding: 80px 16px 50px;
+  }
+
+  .hero-image {
+    border-radius: 16px 48px 16px 48px;
+  }
+
+  .hero-image img {
+    max-height: 240px;
+  }
+
+  .services-grid,
+  .values-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .scroll-reveal {
+    min-height: 320px;
+    background-size: cover;
+  }
+}
+
+/* =========================
+   TESTIMONIAL SECTION
+========================= */
+.testimonial-section {
+  background: var(--color-bg-main);
+  padding: 100px 0;
+}
+
+.testimonial-inner {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 24px;
+
+  display: grid;
+  grid-template-columns: 1fr 2fr;
+  gap: 50px;
+  align-items: flex-start;
+}
+
+/* LEFT TITLE */
+.testimonial-heading {
+  padding-top: 40px;
+}
+
+.testimonial-line {
+  width: 60px;
+  height: 2px;
+  background: var(--color-primary);
+  margin-bottom: 24px;
+}
+
+.testimonial-heading h2 {
+  font-family: 'Libre Baskerville', serif;
+  font-size: 2.2rem;
+  line-height: 1.3;
+  color: var(--color-text-strong);
+}
+
+/* RIGHT CONTENT */
+.testimonial-list {
+  display: flex;
+  flex-direction: column;
+  gap: 32px;
+}
+
+/* CARD */
+.testimonial-card {
+  background: var(--color-white);
+  border-radius: 50px 0 50px 50px;
+  padding: 48px;
+
+  display: flex;
+  gap: 24px;
+  align-items: flex-start;
+}
+
+/* AVATAR WRAPPER */
+.testimonial-avatar {
+  width: 100px;
+  height: 100px;
+  border-radius: 50%;
+  overflow: hidden;
+  flex-shrink: 0;
+}
+
+.testimonial-avatar img {
+  width: 100%;
+  height: 130%;
+  object-fit: cover;
+  object-position: center 30%;
+}
+
+/* CONTENT */
+.testimonial-content {
+  flex: 1;
+}
+
+.testimonial-stars {
+  color: #f4a940;
+  font-size: 1.4rem;
+  margin-bottom: 12px;
+}
+
+.testimonial-text {
+  color: var(--color-text-muted);
+  margin-bottom: 24px;
+  line-height: 1.6;
+}
+
+.testimonial-name {
+  font-size: 0.85rem;
+  font-weight: 700;
+  letter-spacing: 1px;
+  text-transform: uppercase;
+  color: var(--color-text-strong);
+}
+
+.testimonial-role {
+  font-size: 0.85rem;
+  color: var(--color-text-muted);
+}
+
+/* =========================
+   RESPONSIVE
+========================= */
+@media (max-width: 1024px) {
+  .testimonial-inner {
+    grid-template-columns: 1fr;
+  }
+
+  .testimonial-heading {
+    padding-top: 0;
+  }
+}
+
+@media (max-width: 768px) {
+  .testimonial-card {
+    flex-direction: column;
+    border-radius: 40px;
+    padding: 32px;
+  }
+
+  .testimonial-avatar {
+    width: 90px;
+    height: 90px;
+  }
+
+  .testimonial-avatar img {
+    width: 100%;
+    height: 120%;
+  }
+}
+
+
+/* =========================
+   CTA SECTION (ZIPWP STYLE)
+========================= */
+.cta-wrapper {
+  background: linear-gradient(
+    to bottom,
+    var(--color-bg-main) 50%,
+    var(--color-white) 50%
+  );
+  padding: 120px 24px;
+  display: flex;
+  justify-content: center;
+}
+
+/* CARD */
+.cta-card {
+  position: relative;
+  width: 100%;
+  max-width: 1200px;
+  min-height: 500px;
+
+  background-image: url("images/eyadocs-6.jpg");
+  background-size: cover;
+  background-position: center;
+
+  border-radius: 36px 120px 36px 120px;
+  overflow: hidden;
+}
+
+/* OVERLAY */
+.cta-overlay {
+  position: absolute;
+  inset: 0;
+  background: rgba(0, 0, 0, 0.45);
+}
+
+/* CONTENT */
+.cta-content {
+  position: relative;
+  z-index: 2;
+
+  height: 100%;
+  padding: 80px 40px;
+
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+
+  text-align: center;
+}
+
+.cta-content h2 {
+  font-family: 'Libre Baskerville', serif;
+  font-size: clamp(2rem, 4vw, 3rem);
+  color: var(--color-white);
+  line-height: 1.25;
+  margin-bottom: 32px;
+}
+
+/* BUTTON */
+.btn-cta {
+  padding: 14px 40px;
+  border-radius: 999px;
+
+  background: var(--color-white);
+  color: var(--color-text-strong);
+
+  font-weight: 700;
+  letter-spacing: 1px;
+  text-decoration: none;
+
+  transition: all 0.25s ease;
+}
+
+.btn-cta:hover {
+  background: var(--color-primary);
+  color: var(--color-white);
+}
+
+/* =========================
+   RESPONSIVE
+========================= */
+@media (max-width: 768px) {
+  .cta-card {
+    min-height: 320px;
+    border-radius: 24px 60px 24px 60px;
+  }
+
+  .cta-content {
+    padding: 48px 24px;
+  }
+}
+
+/* =========================
+   FOOTER BOTTOM
+========================= */
+.site-footer-bottom {
+  border-top: 1px solid #ddd;
+  background: var(--color-white);
+  padding: 28px 16px;
+  text-align: center;
+}
+
+.site-footer-bottom p {
+  font-size: 0.9rem;
+  color: var(--color-text-muted);
+}
+
+/* =========================
+   ABOUT HERO (WP STYLE)
+========================= */
+.about-hero {
+  background: linear-gradient(
+    to bottom,
+    var(--color-white) 100%,
+    var(--color-white) 100%
+  );
+
+  padding: 120px 24px 0;
+  text-align: center;
+}
+
+.about-hero-inner {
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+/* PREFIX */
+.about-prefix {
+  display: block;
+  font-size: 14px;
+  color: var(--color-primary);
+  margin-bottom: 18px;
+}
+
+/* TITLE */
+.about-title {
+  font-family: 'Libre Baskerville', serif;
+  font-size: clamp(2.6rem, 5vw, 4rem);
+  line-height: 1.15;
+  color: var(--color-text-strong);
+  margin-bottom: 56px;
+}
+
+/* IMAGE */
+.about-hero-image {
+  overflow: hidden;
+  border-radius: 120px 0px 120px 0;
+}
+
+.about-hero-image img {
+  width: 100%;
+  height: clamp(220px, 40vw, 520px);
+  object-fit: cover;
+  display: block;
+}
+
+/* =========================
+   RESPONSIVE
+========================= */
+@media (max-width: 1024px) {
+  .about-hero-image {
+    border-radius: 80px 0px 80px 0;
+  }
+}
+
+@media (max-width: 500px) {
+  .about-hero {
+    padding-top: 96px;
+  }
+
+  .about-title {
+    margin-bottom: 32px;
+  }
+
+  .about-hero-image {
+    border-radius: 50px 0px 50px 0;
+  }
+}
+
+/* =========================
+   ABOUT STORY SPLIT
+========================= */
+.about-story-header h2 {
+  font-family: 'Libre Baskerville', serif;
+}
+
+.about-story {
+  background: var(--color-bg-main);
+  padding: 100px 24px;
+}
+
+.about-story-inner {
+  max-width: 1200px;
+  margin: 0 auto;
+
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 96px;
+
+  align-items: center; /* ⬅️ center vertikal kiri & kanan */
+}
+
+/* LEFT */
+.about-story-left {
+  max-width: 480px;
+}
+
+.about-story-prefix {
+  font-size: 14px;
+  color: var(--color-primary);
+  margin-bottom: 16px;
+}
+
+.about-story-left h2 {
+  font-family: 'Libre Baskerville', serif;
+  font-size: clamp(2rem, 3.5vw, 2.6rem);
+  line-height: 1.3;
+  color: var(--color-text-strong);
+}
+
+/* RIGHT */
+.about-story-right {
+  max-width: 560px;
+}
+
+.about-story-right p {
+  font-size: 1.05rem;      /* ⬅️ naik dikit tapi kerasa */
+  line-height: 1.8;        /* ⬅️ lebih nyaman dibaca */
+  margin-bottom: 24px;     /* ⬅️ napas antar paragraf */
+}
+
+/* =========================
+   RESPONSIVE
+========================= */
+@media (max-width: 900px) {
+  .about-story-inner {
+    grid-template-columns: 1fr;
+    gap: 48px;
+  }
+}
+@media (max-width: 900px) {
+  .about-story-right p {
+    font-size: 1.1rem;
+    line-height: 1.85;
+  }
+}
+
+/* =========================
+   PRINCIPLES SECTION
+========================= */
+.principles-section {
+  background: var(--color-bg-main);
+  padding: 100px 24px;
+}
+
+.principles-inner {
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.principles-header {
+  margin-bottom: 64px;
+}
+
+.principles-header h2 {
+  font-family: 'Libre Baskerville', serif;
+  font-size: 2.4rem;
+  color: var(--color-text-strong);
+}
+
+/* GRID */
+.principles-grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 80px 100px;
+}
+
+/* ITEM */
+.principle-item {
+  max-width: 480px;
+}
+
+.principle-line {
+  display: block;
+  width: 100%;
+  height: 1.5px;
+  background: var(--color-primary);
+  margin-bottom: 24px;
+}
+
+.principle-item h3 {
+  font-family: 'Libre Baskerville', serif;
+  font-size: 1.35rem;
+  margin-bottom: 12px;
+  color: var(--color-text-strong);
+}
+
+.principle-item p {
+  font-size: 0.95rem;
+  line-height: 1.8;
+  color: var(--color-text-muted);
+}
+
+/* =========================
+   RESPONSIVE
+========================= */
+@media (max-width: 900px) {
+  .principles-grid {
+    grid-template-columns: 1fr;
+    gap: 48px;
+  }
+}
+
+/* =========================
+   VISION & MISSION
+========================= */
+.vision-mission {
+  background: var(--color-bg-main);
+  padding: 120px 24px;
+}
+
+.vision-mission-inner {
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+/* HEADER */
+.vision-header {
+  text-align: center;
+  margin-bottom: 80px;
+}
+
+.section-line {
+  display: block;
+  width: 60px;
+  height: 2px;
+  background: var(--color-primary);
+  margin: 0 auto 20px;
+}
+
+.vision-header h2 {
+  font-family: 'Libre Baskerville', serif;
+  font-size: 2.6rem;
+}
+
+/* VISI */
+.vision-block {
+  max-width: 720px;
+  margin: 0 auto 100px;
+  text-align: center;
+}
+
+.vision-block h3 {
+  font-family: 'Libre Baskerville', serif;
+  font-size: 1.8rem;
+  margin-bottom: 20px;
+}
+
+.vision-block p {
+  font-size: 1.1rem;
+  line-height: 1.85;
+  color: var(--color-text-muted);
+}
+
+/* MISSION CARD */
+.mission-card {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  background: var(--color-white);
+  border-radius: 100px 0 100px 0;
+  overflow: hidden;
+  margin-bottom: 80px;
+}
+
+.mission-card.reverse {
+  grid-template-columns: 1fr 1fr;
+  border-radius: 0 100px 0 100px;
+}
+
+/* TEXT */
+.mission-text {
+  padding: 80px;
+}
+
+.mission-text h3 {
+  font-family: 'Libre Baskerville', serif;
+  font-size: 1.8rem;
+  margin-bottom: 20px;
+}
+
+.mission-text p {
+  font-size: 1.05rem;
+  line-height: 1.8;
+  color: var(--color-text-muted);
+}
+
+/* IMAGE */
+.mission-image img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.radius-right {
+  border-top-right-radius: 100px;
+}
+
+.radius-left {
+  border-top-left-radius: 100px;
+}
+
+/* =========================
+   RESPONSIVE
+========================= */
+@media (max-width: 900px) {
+  .mission-card,
+  .mission-card.reverse {
+    grid-template-columns: 1fr;
+    border-radius: 40px;
+  }
+
+  .mission-text {
+    padding: 40px;
+  }
+
+  .radius-right,
+  .radius-left {
+    border-radius: 0;
+  }
+}
+
+@media (max-width: 600px) {
+  .vision-header h2 {
+    font-size: 2rem;
+  }
+
+  .mission-text h3 {
+    font-size: 1.5rem;
+  }
+
+  .mission-text p,
+  .vision-block p {
+    font-size: 1.1rem;
+  }
+}
+
+/* =========================
+   FOOTER CTA (CENTERED CARD)
+========================= */
+.footer-cta {
+  max-width: 1200px;
+  margin: 56px auto 160px; 
+  /*                 ↑ nambah space bawah */
+
+  position: relative;
+  background-image: url("images/eyadocs-1.jpeg");
+  background-size: cover;
+  background-position: center;
+
+  padding: 120px 24px;
+  border-radius: 0px 100px 0 100px;
+  overflow: hidden;
+}
+
+/* OVERLAY */
+.footer-cta-overlay {
+  position: absolute;
+  inset: 0;
+  background: rgba(0, 0, 0, 0.5);
+}
+
+/* CONTENT */
+.footer-cta-inner {
+  position: relative;
+  z-index: 2;
+
+  max-width: 760px;
+  margin: 0 auto;
+  text-align: center;
+}
+
+.footer-cta-inner h2 {
+  font-family: 'Libre Baskerville', serif;
+  font-size: clamp(2rem, 4vw, 3rem);
+  line-height: 1.25;
+  color: #fff;
+  margin-bottom: 32px;
+}
+
+/* BUTTON */
+.btn-footer-cta {
+  display: inline-block;
+
+  padding: 14px 36px;
+  border-radius: 999px;
+
+  background: #ffffff;
+  color: var(--color-text-strong);
+
+  font-weight: 700;
+  letter-spacing: 1px;
+  text-decoration: none;
+
+  border: 1px solid #333;
+  transition: all 0.25s ease;
+}
+
+.btn-footer-cta:hover {
+  background: var(--color-primary);
+  color: #ffffff;
+}
+
+/* =========================
+   RESPONSIVE
+========================= */
+@media (max-width: 1024px) {
+  .footer-cta {
+    margin: 64px 24px 100px;   /* ⬅ masih ada “napas” kiri kanan */
+    border-radius: 0px 80px 0 80px;
+    padding: 100px 24px;
+  }
+}
+
+@media (max-width: 768px) {
+  .footer-cta {
+    margin: 48px 16px 80px;
+    border-radius: 0px 60px 0 60px;
+    padding: 64px 24px;
+  }
+}
+
+/* =========================
+   CONTACT PAGE
+========================= */
+.contact-hero {
+  background: linear-gradient(
+    to bottom,
+    var(--color-bg-main),
+    var(--color-white)
+  );
+  padding: 120px 24px 80px;
+  text-align: center;
+}
+
+.contact-hero-inner {
+  max-width: 800px;
+  margin: 0 auto;
+}
+
+.contact-prefix {
+  display: block;
+  font-size: 14px;
+  color: var(--color-primary);
+  margin-bottom: 16px;
+}
+
+.contact-title {
+  font-family: 'Libre Baskerville', serif;
+  font-size: clamp(2.4rem, 5vw, 3.6rem);
+  line-height: 1.2;
+  margin-bottom: 24px;
+  color: var(--color-text-strong);
+}
+
+.contact-desc {
+  color: var(--color-text-muted);
+  max-width: 600px;
+  margin: 0 auto;
+}
+
+/* CARD */
+.contact-section {
+  padding: 80px 24px 120px;
+  display: flex;
+  justify-content: center;
+}
+
+.contact-card {
+  position: relative;
+  max-width: 900px;
+  width: 100%;
+  padding: 100px;
+
+  background-image: url("images/eyadocs-2.jpg"); /* ganti bebas */
+  background-size: cover;
+  background-position: center;
+
+  border-radius: 40px 40px 40px 40px;
+  text-align: center;
+
+  box-shadow: 0 20px 40px rgba(0,0,0,0.08);
+  overflow: hidden;
+}
+
+.contact-card::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: rgba(0, 0, 0, 0.55);
+  z-index: 0;
+}
+
+.contact-card > * {
+  position: relative;
+  z-index: 2;
+}
+
+.contact-card h2 {
+  font-family: 'Libre Baskerville', serif;
+  font-size: clamp(2.2rem, 4.5vw, 3rem);
+  letter-spacing: 0.5px;
+  color: #ffffff;
+  margin-bottom: 16px;
+}
+
+.contact-card p {
+  font-size: 1.15rem;
+  line-height: 1.85;
+  color: rgba(255, 255, 255, 0.95);
+  max-width: 460px;
+  margin: 0 auto 32px;
+}
+
+.contact-card h2,
+.contact-card p {
+  text-shadow: 0 2px 6px rgba(0,0,0,0.35);
+}
+
+
+/* BUTTON */
+.btn-contact-wa {
+  display: inline-block;
+  padding: 14px 40px;
+  border-radius: 999px;
+
+  background: var(--color-primary);
+  color: #fff;
+
+  font-weight: 700;
+  letter-spacing: 1px;
+  text-decoration: none;
+
+  transition: all 0.25s ease;
+}
+
+.btn-contact-wa:hover {
+  background: var(--color-primary-dark);
+}
+
+/* INSTAGRAM BUTTON */
+.btn-contact-ig {
+  display: inline-block;
+  margin-top: 16px;
+
+  padding: 14px 40px;
+  border-radius: 999px;
+
+  background: transparent;
+  color: #ffffff;
+
+  font-weight: 700;
+  letter-spacing: 1px;
+  text-decoration: none;
+
+  border: 2px solid #ffffff;
+  transition: all 0.25s ease;
+}
+
+.btn-contact-ig:hover {
+  background: #ffffff;
+  color: var(--color-text-strong);
+}
+
+.contact-note {
+  display: block;
+  margin-top: 20px;
+  font-size: 0.85rem;
+  color: var(--color-text-muted);
+}
+
+/* RESPONSIVE */
+@media (max-width: 768px) {
+  .contact-card {
+    padding: 40px 24px;
+    border-radius: 32px;
+  }
+
+  .contact-card p {
+    font-size: 1.05rem;
+    line-height: 1.8;
+  }
+}
